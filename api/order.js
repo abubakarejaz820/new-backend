@@ -1,6 +1,6 @@
 let orders = [];
 
-export default function handler(req, res) {
+module.exports = function handler(req, res) {
   if (req.method === "GET") {
     res.status(200).json({ orders });
   } else if (req.method === "POST") {
@@ -26,4 +26,4 @@ export default function handler(req, res) {
   } else {
     res.status(405).json({ message: "Method not allowed" });
   }
-}
+};
